@@ -7,7 +7,7 @@ class Personaje:
     #metodos personaje
     def correr(self, status):
         if(status): 
-            print("el personaje" + self.nombre + "esta correindo")
+            print("el personaje" + self.nombre + "esta corriendo")
         else:
             print("el personaje"+ self.nombre + " se detuvo")
     def lanzargranada(self):
@@ -15,4 +15,4 @@ class Personaje:
     def Recargararma(self, municion):
         cargador= 5
         cargador= cargador + municion
-        print("el arma tiene ahora"+ cargador + "balas" )
+        print("el arma tiene ahora"+ str(cargador) + "balas" )
