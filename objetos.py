@@ -20,6 +20,7 @@ cargaV= int(input("cuantas balas se recargaran al villano :"))
 #3. creamos 2 objetos
 heroe= Personaje(espH,nomH,altH)
 villano= Personaje(espV,nomV,altV)
+heroe.setnombre("pepe pecas")
 
 
 
@@ -27,18 +28,22 @@ villano= Personaje(espV,nomV,altV)
 #HEROE
 print("")
 print("## Atributos y Metodos del Heroe ##")
-print("el personaje pertenece a la raza:"+ heroe.especie)
-print("el nombre del personajes es:"+ heroe.nombre)
-print("La estatura es:"+ str(heroe.altura)+ " metros")
+print("el personaje pertenece a la raza:"+ heroe.getespecie())
+print("el nombre del personajes es:"+ heroe.getnombre())
+print("La estatura es:"+ str(heroe.getaltura())+ " metros")
 heroe.correr(True)
 heroe.lanzargranada
 heroe.Recargararma(cargaH)
+#ejemplo de lo que no se puede hacer
+
+#heroe.__pensar()
+
 #VILLANO
 print("")
 print("## Atributos y Metodos del Villano ##")
-print("el personaje pertenece a la raza:"+ villano.especie)
-print("el nombre del personajes es:"+ villano.nombre)
-print("La estatura es:"+ str(villano.altura)+ " metros")
+print("el personaje pertenece a la raza:"+ villano.getespecie())
+print("el nombre del personajes es:"+ villano.getnombre())
+print("La estatura es:"+ str(villano.getaltura())+ " metros")
 heroe.correr(False)
 heroe.lanzargranada
 heroe.Recargararma(cargaV)
